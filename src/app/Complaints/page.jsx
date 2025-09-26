@@ -38,13 +38,7 @@ function ComplaintsPage() {
         {/* Title */}
         <h2 className="text-2xl font-bold mb-6 text-center">{t('Complaint Form')}</h2>
 
-        {/* Success Message */}
-        {submitted && (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4 text-center">
-            {t('Your complaint has been submitted successfully!')}
-          </div>
-        )}
-
+      
         {/* Form */}
         <form className="space-y-4" onSubmit={handleSubmit}>
           
@@ -166,6 +160,12 @@ function ComplaintsPage() {
           >
             {t('Submit Complaint')}
           </button>
+  {/* Success Message */}
+        {submitted && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4 text-center">
+            {t('Your complaint has been submitted successfully!')}
+          </div>
+        )}
 
         </form>
       </div>
