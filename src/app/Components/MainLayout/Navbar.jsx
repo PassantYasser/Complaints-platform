@@ -88,16 +88,16 @@ function Navbar({ onMenuClick }) {
             {/* User Info */}
             <div className="flex gap-3">
               <img
-                src="/images/Male02.svg"
+                src="/logoiconch.png"
                 alt="User"
                 width="50px"
                 height="50px"
                 className="rounded-full"
               />
-              <div className="hidden lg1:block">
+              {/* <div className="hidden lg1:block">
                 <p className="text-[#364152] text-base font-medium mt-0.5">حسام</p>
                 <p className="text-[#4B5565] text-sm font-normal">المشرف الفائق</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
