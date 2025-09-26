@@ -74,23 +74,23 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
                 )}
             </Link>
           </li>
-{/* 
-          <li  className={`cursor-pointer py-4 px-2 rounded ${pathname === "/requests" ? "bg-[#C69815] text-[#fff]" : ""}`}>
+ 
+          <li  className={`cursor-pointer py-4 px-2 rounded ${pathname === "/FollowUp" ? "bg-[#C69815] text-[#fff]" : ""}`}>
             <Link href="/requests" onClick={() => setIsSidebarOpen(false)}>
                 {open?(
                 //open 
                   <div  className='flex gap-4 items-center'>
-                    <img src="/images/icons/Requests.svg" alt="" className={pathname === "/requests" ? "invert" : ""}/>
-                    <p className='text-base text-[#364152] font-normal'>{t('Requests')}</p>
+                    <img src="/images/icons/Requests.svg" alt="" className={pathname === "/FollowUp" ? "invert" : ""}/>
+                    <p className='text-base text-[#364152] font-normal'>{t('Follow-up complaints')}</p>
                   </div>
                 ):(
                   <div className='flex justify-center items-center'>
-                    <img src="/images/icons/Requests.svg" alt="" className={pathname === "/requests" ? "invert" : ""}/>
+                    <img src="/images/icons/Requests.svg" alt="" className={pathname === "/FollowUp" ? "invert" : ""}/>
                   </div>
                 )}
             </Link>
           </li>
-
+{/*
           <li  className={`cursor-pointer py-4 px-2 rounded ${pathname === "/workers" ? "bg-[#C69815] text-[#fff]" : ""}`}>
             <Link href="/workers" onClick={() => setIsSidebarOpen(false)}>
               {open?(

@@ -75,43 +75,10 @@ function ComplaintsPage() {
             />
           </div>
 
-          {/* Governorate */}
-            <div className="relative w-full">
-      <label className="block mb-2 text-sm font-normal">{t('Governorate')}</label>
-      
-      
-      <div
-        className="border rounded-sm p-2 cursor-pointer flex justify-between items-center focus:ring-3 focus:ring-yellow-600 outline-none"
-        onClick={() => setOpen(!open)}
-      >
-        <span className={`${selected === t('Select your governorate') ? 'text-gray-500' : 'text-black'}`}>{selected}</span>
-        <span className={`transform transition-transform ${open ? 'rotate-180' : ''}`}>&#9662;</span>
-      </div>
-
-      {/* Dropdown items */}
-      {open && (
-        <ul className="absolute z-10 w-full bg-white border rounded-sm mt-1 shadow-lg max-h-48 overflow-auto">
-          {governorates.map((gov, index) => (
-            <li
-              key={index}
-              className={`p-2 cursor-pointer hover:bg-yellow-500 ${
-                selected === gov ? 'bg-gray-200 font-semibold' : ''
-              }`}
-              onClick={() => {
-                setSelected(gov);
-                setOpen(false);
-              }}
-            >
-              {gov}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-
+          
           {/* Email */}
           <div>
-            <label className="block mb-2 text-sm font-normal">{t('Email')}</label>
+            <label className="block mb-2 text-sm font-normal">{t('Email')}/({t('optional')})</label>
             <input
               type="email"
               placeholder={t('Enter your email')}
@@ -120,23 +87,14 @@ function ComplaintsPage() {
             />
           </div>
 
-          {/* Workplace */}
-          <div>
-            <label className="block mb-2 text-sm font-normal">{t('Workplace')}</label>
-            <input
-              type="text"
-              placeholder={t('Enter your workplace')}
-              className="w-full border rounded-sm p-2 focus:ring-3 focus:ring-yellow-600 focus:border-none outline-none"
-              required
-            />
-          </div>
+          
 
           {/* Home Address */}
           <div>
-            <label className="block mb-1 text-sm font-normal">{t('Home Address')}</label>
+            <label className="block mb-1 text-sm font-normal">{t('Address as it appears on the card')}</label>
             <input
               type="text"
-              placeholder={t('Enter your home address')}
+              placeholder={t('Enter your Address as it appears on the card')}
               className="w-full border rounded-sm p-2 focus:ring-3 focus:ring-yellow-600 focus:border-none outline-none"
               required
             />
