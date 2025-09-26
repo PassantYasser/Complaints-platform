@@ -79,6 +79,30 @@ function ComplaintsPage() {
           setTaxFile(null);
           setTaxProgress(0);
         };
+
+        //Upload supporting documents
+          const [docFile , setDocFile]= useState(null);
+        const[docProgress , setDocProgress]= useState(0);
+        
+        const handledocFileChange = (e)=>{
+          const selectTaxFile = e.target.files[0];
+          if(selectTaxFile && selectTaxFile.type === "application/pdf" ){
+            setDocFile(selectTaxFile);
+            let uploaded=0;
+            const interval = setInterval(() => {
+              uploaded += 20;
+              if (uploaded >= 100) {
+                uploaded = 100;
+                clearInterval(interval);
+              }
+              setDocProgress(uploaded);
+            }, 500);
+          }
+        }
+        const handleDocRemove = () => {
+          setDocFile(null);
+          setDocProgress(0);
+        };
       
   return (
     <main className="flex items-center justify-center min-h-screen bg-gray-100 p-6">
@@ -154,17 +178,7 @@ function ComplaintsPage() {
             />
           </div>
 
-          {/* Complaint Details */}
-          <div>
-            <label className="block mb-2 text-sm font-normal text-[#364152]">{t('Complaint Details')}</label>
-            <textarea
-              rows="4"
-              placeholder={t('Enter complaint details here...')}
-              className="w-full border border-[#C8C8C8] rounded-sm p-2 focus:ring-3 focus:ring-yellow-600 focus:border-none outline-none"
-              required
-            ></textarea>
-          </div>
-
+        
           {/* Front national ID card photo */}
           <div className="flex flex-col gap-3">
 <label className="text-[#364152]">{t("Front national ID card photo")}</label>
@@ -312,6 +326,93 @@ function ComplaintsPage() {
               </div>
             )}
           </div>
+
+
+          {/*Upload supporting documents*/}
+          <div className="flex flex-col gap-3">
+            <label className="text-[#364152]">{t("Upload supporting documents")}</label>
+
+            {!docFile ? (
+              // === Initial state (placeholder upload box) ===
+              <label className="flex items-center relative gap-2 h-15 p-3 border border-[#C8C8C8] rounded-[3px] text-[#9A9A9A] cursor-pointer">
+                <img
+                  src="/images/icons/upload.svg"
+                  alt="upload"
+                  className="w-5 h-5 absolute left-3"
+                />
+                <span className="flex-1">
+                  {t("Upload a photo of the back of your national ID card")}
+                </span>
+                <input
+                  type="file"
+                  accept="application/pdf"
+                  className="hidden"
+                  onChange={handledocFileChange}
+                />
+              </label>
+            ) : docProgress < 100? (
+              // === Upload in progress UI ===
+              <div className="border border-[#C8C8C8] rounded-[3px] p-3">
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                    <img src="/images/icons/imageicon.svg" alt="pdf" className="w-5 h-5" />
+                    <span className="text-sm text-[#364152] font-medium">
+                      {docFile.name}
+                    </span>
+                  </div>
+                  <button onClick={handleDocRemove} className="text-[#C69815]">
+                    <img src="/images/icons/cancel-circle.svg" alt="" />
+                  </button>
+                
+                </div>
+
+                <div className="flex items-center justify-between mt-2 text-xs text-[#364152] p-3">
+                  <div className='flex gap-2'>
+                    <p className='text-[#9D919F] text-sm font-normal '> • 60 ك ب من 120 م ب</p>
+                    <img src="/images/icons/loading.svg" alt="" />
+                    <span>{t("Loading...")}</span>
+                  </div>
+                  {/* <span>{progress}%</span> */}
+                </div>
+
+                <div className="w-full bg-gray-200 h-1 mt-1 rounded">
+                  <div
+                    className="bg-[#C69815] h-1 rounded"
+                    style={{ width: `${docProgress}%` }}
+                  ></div>
+                </div>
+              </div>
+
+            ) : (
+
+              // Final UI after upload complete
+              <div className="border border-[#C8C8C8] rounded-[3px] p-3 flex items-center justify-between">
+                  {/* file name + icon */}
+                <div className="flex items-center gap-2">
+                  <img src="/images/icons/imageicon.svg" alt="pdf" className="w-5 h-5" />
+                  <span className="text-sm text-[#656565] font-medium">{docFile.name}</span>
+                </div>
+                {/* delete button */}
+                <button onClick={handleDocRemove}>
+                  <img src="/images/icons/delete.svg" alt="delete" className="w-5 h-5 text-[#C69815]" />
+                </button>
+
+              
+              </div>
+            )}
+          </div>
+
+  {/* Complaint Details */}
+          <div>
+            <label className="block mb-2 text-sm font-normal text-[#364152]">{t('Complaint Details')}</label>
+            <textarea
+              rows="4"
+              placeholder={t('Enter complaint details here...')}
+              className="w-full border border-[#C8C8C8] rounded-sm p-2 focus:ring-3 focus:ring-yellow-600 focus:border-none outline-none"
+              required
+            ></textarea>
+          </div>
+
 
           {/* Submit Button */}
           <button
