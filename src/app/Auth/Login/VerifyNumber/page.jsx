@@ -51,12 +51,12 @@ function VerifyNumberpage() {
       <>
 
       <div className=' flex justify-between gap-8  '>
-        <section className='w-full mt-25 lg1:mt-50.5 px-8 '>
+        <section className='w-full mt-25 lg1:mt-10 px-8 '>
           {/* 📱Tablet screen only */}
-          <div className="lg1:hidden flex justify-center gap-1 mb-17.5 lg1:mb-20">
+          {/* <div className="lg1:hidden flex justify-center gap-1 mb-17.5 lg1:mb-20">
             <img src="/images/LogoText.svg" alt="" />
             <img src="/images/Logo.svg" alt="" />
-          </div>
+          </div> */}
 
           {/* logo */}
           <div className='WHLogA bg-[#EEF2F6] rounded-[100px] flex justify-center items-center mx-auto mb-5'>
@@ -74,7 +74,7 @@ function VerifyNumberpage() {
             </p>
           </div>
 
-          <div className='my-10  '>
+          <div className='my-8  '>
             <p className='text-[#4D4D4D] text-base font-medium mb-3 flex justify-center'>{t('verification code')}</p>
             <form className="flex gap-4 justify-center"dir="ltr">
               {[0, 1, 2, 3].map((i) => (
@@ -85,7 +85,7 @@ function VerifyNumberpage() {
                   maxLength="1"
                   onChange={(e) => handleChange(e, i)}
                   onKeyDown={(e) => handleKeyDown(e, i)}
-                  className="border border-[#C7C7C7] bg-[#fff] w-25 h-20 rounded-[3px] text-center text-lg"
+                  className="border border-[#C7C7C7] bg-[#fff] w-15 h-15 rounded-[3px] text-center text-lg"
                 />
               ))}
             </form>
