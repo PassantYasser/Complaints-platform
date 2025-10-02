@@ -11,8 +11,8 @@ function ConfirmationDonePage() {
 
   return (
     <>
-    <div className='p-8 lg1:flex justify-between gap-8 '>
-      <section className='w-full mt-37.5 lg1:mt-31'>
+    <div className=' lg1:flex justify-between gap-8 '>
+      <section className='w-full mt-37.5 lg1:mt-31 px-8'>
         
         <div className='flex flex-col items-center gap-4'>
           <p className='text-[#0F022E] text-2xl font-bold'>{t('It was successful!')}🤩</p>

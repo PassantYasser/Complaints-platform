@@ -34,8 +34,8 @@ function CreateNewPasswordpage() {
 
   return (
     <>
-      <div className="p-8 lg1:flex justify-between gap-8  ">
-        <section className="w-full mt-15">
+      <div className=" lg1:flex justify-between gap-8  ">
+        <section className="w-full mt-15 px-8">
           <div className="flex flex-col items-center">
             <p className="mb-6 text-[#C69815] text-2xl font-semibold">
               {t("Create a new password")}

@@ -50,8 +50,8 @@ function VerifyNumberpage() {
   return (
       <>
 
-      <div className='p-8 flex justify-between gap-8  '>
-        <section className='w-full mt-25 lg1:mt-50.5 '>
+      <div className=' flex justify-between gap-8  '>
+        <section className='w-full mt-25 lg1:mt-50.5 px-8 '>
           {/* 📱Tablet screen only */}
           <div className="lg1:hidden flex justify-center gap-1 mb-17.5 lg1:mb-20">
             <img src="/images/LogoText.svg" alt="" />

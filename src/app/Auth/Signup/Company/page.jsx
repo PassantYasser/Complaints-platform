@@ -44,8 +44,8 @@ const [currentStep, setCurrentStep] = useState(0);
 
   return (
     <>
-      <div className="p-8 lg1:flex justify-between gap-8  ">
-        <section className="w-full mt-10 lg1:mt-2  ">
+      <div className="lg1:flex justify-between gap-8  ">
+        <section className="w-full mt-10 lg1:mt-2 p-8 ">
           {/* title */}
           <div className='flex flex-col items-center gap-3 mb-10'>
             <p className='text-[#9E7A11] text-2xl font-medium'>

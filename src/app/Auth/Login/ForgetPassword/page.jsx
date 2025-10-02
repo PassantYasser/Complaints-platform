@@ -9,8 +9,8 @@ function ForgetPasswordpage() {
 
   return (
     <>
-      <div className="p-8 lg1:flex justify-between gap-8  ">
-        <section className="w-full">
+      <div className=" lg1:flex justify-between gap-8  ">
+        <section className="w-full px-8">
           <div className="lg1:mt-40.5 mt-25 flex flex-col items-center">
             <p className="mb-6 text-[#C69815] text-2xl font-semibold">
               {t("Forgot your password?")}

@@ -12,7 +12,7 @@ function SecondSection() {
         >
           
 
-        <img src="/testy.png" alt="Second Part" className='w-full h-screen' />
+        <img src="/coverr.jpeg" alt="Second Part" className='w-full h-screen' />
 
 
         
