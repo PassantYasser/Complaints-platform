@@ -5,47 +5,126 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 function SignuPage() {
-  const {t}= useTranslation()
+  const { t } = useTranslation();
+
   return (
     <>
-      <div className="p-8 lg1:flex justify-between gap-8 ">
-        <section className="w-full mt-12.5 lg1:mt-28.5 ">
-          <div className='mb-37.5'>
-            <div className='flex justify-center gap-1  mb-6'>
-              <img src="/images/LogoText.svg" alt="" />
-              <img src="/images/Logo.svg" alt="" />
+      <div className="lg1:flex justify-between gap-8">
+        
+        <section className="p-8 w-full">
+          {/* Title */}
+          <h2 className="text-2xl font-semibold text-center text-[#364152] mb-8">
+            إنشاء حساب جديد
+          </h2>
+
+          <form className="flex flex-col gap-4">
+
+            {/* First Name */}
+            <div className="flex flex-col gap-2">
+              <label className="text-[#364152] fontSizeA font-normal" htmlFor="firstName">
+                {t("First Name")} / الاسم الأول
+              </label>
+              <input
+                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder={t("First Name")}
+              />
             </div>
-            <p className='text-[#364152] text-xl font-normal text-center '>{t('Welcome to our platform, where your journey begins with ease and clarity.')}</p>
-          </div>
 
-          <div className='flex flex-col items-center mb-14'>
-            <p className='text-[#9E7A11] text-2xl font-medium mb-6'>{t('Choose your account type to get started?')}</p>
-            <p className='w-[500px] text-center text-[#656565] text-xl font-normal'>{t('Please select whether you are registering as a company or as an individual to provide you with a personalized experience that suits your needs.')}</p>
-          </div>
+            {/* Last Name */}
+            <div className="flex flex-col gap-2">
+              <label className="text-[#364152] fontSizeA font-normal" htmlFor="lastName">
+                {t("Last Name")} / اسم العائلة
+              </label>
+              <input
+                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder={t("Last Name")}
+              />
+            </div>
 
-          <div className='flex justify-center gap-12'>
-            <Link href='/Auth/Signup/Company' className='flex flex-col justify-center w-62.5 h-62.5 border border-[#C69815] bg-[#F9F5E8] rounded-[3px]'>
-              <span className='flex justify-center mb-5'>
-                <img src="/images/Company.svg" alt="" />
+            {/* Username */}
+            <div className="flex flex-col gap-2">
+              <label className="text-[#364152] fontSizeA font-normal" htmlFor="username">
+                 اسم المستخدم
+              </label>
+              <input
+                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                type="text"
+                name="username"
+                id="username"
+                placeholder={t("Username")}
+              />
+            </div>
+
+            {/* National ID */}
+            <div className="flex flex-col gap-2">
+              <label className="text-[#364152] fontSizeA font-normal" htmlFor="nationalId">
+                الرقم القومي
+              </label>
+              <input
+                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                type="text"
+                name="nationalId"
+                id="nationalId"
+                placeholder="الرقم القومي"
+              />
+            </div>
+
+            {/* Password */}
+            <div className="flex flex-col gap-2">
+              <label className="text-[#364152] fontSizeA font-normal" htmlFor="password">
+                 كلمة المرور
+              </label>
+              <input
+                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                type="password"
+                name="password"
+                id="password"
+                placeholder={t("Password")}
+              />
+            </div>
+
+            {/* Confirm Password */}
+            <div className="flex flex-col gap-2">
+              <label className="text-[#364152] fontSizeA font-normal" htmlFor="confirmPassword">
+                 تأكيد كلمة المرور
+              </label>
+              <input
+                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder={t("Confirm Password")}
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button className="w-full h-12 bg-[#DDA918] text-white text-base font-medium rounded-[3px] mt-4 mb-2">
+              {t("Sign Up")}
+            </button>
+
+            {/* Login Link */}
+            <p className="flex justify-center gap-1.5">
+              <span className="text-[#697586] text-lg font-normal">
+                {t("Already have an account?")}
               </span>
-              <p className='flex justify-center text-[#000] text-2xl font-medium'>{t('Company')} </p>
-            </Link>
+              <Link href='/Auth/Login' className="text-[#9E7A11] text-lg font-medium">
+                {t("Log in")}
+              </Link>
+            </p>
 
-            <Link href='/Auth/Signup/Freelance' className='flex flex-col justify-center w-62.5 h-62.5 border border-[#C69815] bg-[#F9F5E8] rounded-[3px]'>
-              <span className='flex justify-center mb-5'>
-                <img src="/images/Freelance.svg" alt="" />
-              </span>
-              <span className='flex justify-center text-[#000] text-2xl font-medium'>{t('Freelance')} </span>
-            </Link>
-          
-          </div>
+          </form>
         </section>
 
-          <SecondSection/>
+        <SecondSection/>
       </div>
-
     </>
   )
 }
 
-export default SignuPage
+export default SignuPage;
