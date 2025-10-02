@@ -11,7 +11,7 @@ function ForgetPasswordpage() {
     <>
       <div className=" lg1:flex justify-between gap-8  ">
         <section className="w-full px-8">
-          <div className="lg1:mt-40.5 mt-25 flex flex-col items-center">
+          <div className="lg1:mt-10 mt-25 flex flex-col items-center">
             <p className="mb-6 text-[#C69815] text-2xl font-semibold">
               {t("Forgot your password?")}
             </p>
@@ -20,7 +20,7 @@ function ForgetPasswordpage() {
                 "Enter the phone number or email address of the account for which you want to change the password."
               )}
             </p>
-            <img className="my-17.5" src="/images/lockLogIcon.svg" alt="" />
+            <img className="my-8 w-30 h-30" src="/images/lockLogIcon.svg" alt="" />
           </div>
 
           <form className="w-full flex flex-col gap-6">
@@ -41,7 +41,7 @@ function ForgetPasswordpage() {
             </div>
             <Link
               href="../Login/VerifyNumber"
-              className="w-full h-14 bg-[#DDA918] text-white text-base font-medium rounded-[3px] mt-8 mb-12 flex justify-center items-center "
+              className="w-full h-14 bg-[#DDA918] text-white text-base font-medium rounded-[3px] mt-8 mb-8 flex justify-center items-center "
             >
               {t("send")}
             </Link>

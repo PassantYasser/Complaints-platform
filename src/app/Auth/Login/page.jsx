@@ -14,7 +14,10 @@ function LoginPage() {
         <section className="w-full px-8">
 
           {/* 📱Tablet screen only */}
-        
+        {/* <div className="lg1:hidden flex justify-center gap-1 my-20">
+            <img src="/images/LogoText.svg" alt="" />
+            <img src="/images/Logo.svg" alt="" />
+          </div> */}
 
           {/* title  */}
           <div className=" lg1:mt-10  lg1:mb-15 lg1:items-center mb-17.5  flex flex-col   rounded-[10px]">
