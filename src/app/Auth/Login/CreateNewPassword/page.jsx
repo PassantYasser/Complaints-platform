@@ -35,7 +35,7 @@ function CreateNewPasswordpage() {
   return (
     <>
       <div className=" lg1:flex justify-between gap-8  ">
-        <section className="w-full mt-15 px-8">
+        <section className="w-full mt-5 px-8">
           <div className="flex flex-col items-center">
             <p className="mb-6 text-[#C69815] text-2xl font-semibold">
               {t("Create a new password")}
@@ -43,10 +43,9 @@ function CreateNewPasswordpage() {
             <p className="text-[#656565] text-lg font-normal max-w-[500px] text-center">
               {t("Your phone number has been verified and you can create a new password.")}
             </p>
-            <img className="my-12 lg1:my-17.5" src="/images/lockLogIcon.svg" alt="" />
           </div>
 
-          <form>
+          <form className="mt-10">
             <label className="text-[#364152] fontSizeA font-normal">
               {t("New Password")}
             </label>
