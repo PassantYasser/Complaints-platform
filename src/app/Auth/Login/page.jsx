@@ -14,14 +14,11 @@ function LoginPage() {
         <section className="w-full px-8">
 
           {/* 📱Tablet screen only */}
-          <div className="lg1:hidden flex justify-center gap-1 my-20">
-            <img src="/images/LogoText.svg" alt="" />
-            <img src="/images/Logo.svg" alt="" />
-          </div>
+        
 
           {/* title  */}
-          <div className=" lg1:mt-50.5  lg1:mb-25 lg1:items-center mb-17.5  flex flex-col   rounded-[10px]">
-            <p className="text-[#9E7A11] text-[32px] font-semibold mb-6">
+          <div className=" lg1:mt-10  lg1:mb-15 lg1:items-center mb-17.5  flex flex-col   rounded-[10px]">
+            <p className="text-[#9E7A11] text-[32px] font-semibold mb-2">
               {t("Welcome back!")}
             </p>
             <p className="text-[#656565] text-2xl font-normal">
@@ -29,7 +26,7 @@ function LoginPage() {
             </p>
           </div>
 
-          <form className="w-full flex flex-col gap-6">
+          <form className="w-full flex flex-col gap-3">
 
             {/* email form */}
             <div className="flex flex-col gap-3">
