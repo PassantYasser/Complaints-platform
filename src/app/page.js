@@ -56,7 +56,7 @@ function Homepage({ children }) {
           <Link href='/Auth/Login' className="mt-6 text-gray-600 text-sm underline">
             تسجيل دخول 
           </Link>
-          <Link href='/Auth/Signup'>
+          <Link href='/Auth/Signup/Company'>
             انشاء حساب
           </Link>
         </div>
