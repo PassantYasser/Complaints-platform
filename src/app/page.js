@@ -29,9 +29,8 @@ function Homepage({ children }) {
 
       {/* without navbar and sidebar */}
 
-       <div className="flex h-screen bg-[#fdfbf5]">
+      <div className="flex h-screen bg-[#fdfbf5]">
       
-
       {/* Main content */}
       <div className="flex-1 flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-xl md:text-2xl font-bold text-gray-800 mb-8">
@@ -52,6 +51,15 @@ function Homepage({ children }) {
         <p className="mt-6 text-gray-600 text-sm">
           لإرسال شكوى جديدة اضغط على الشكاوي
         </p>
+
+        <div className='flex flex-col'>
+          <Link href='/Auth/Login' className="mt-6 text-gray-600 text-sm underline">
+            تسجيل دخول 
+          </Link>
+          <Link href='/Auth/Signup'>
+            انشاء حساب
+          </Link>
+        </div>
       </div>
     </div>
 
