@@ -11,7 +11,7 @@ function SignuPage() {
     <>
       <div className="lg1:flex justify-between gap-8">
         
-        <section className="p-8 w-full">
+        <section className="pt-8 px-8 w-full ">
           {/* Title */}
           <h2 className="text-2xl font-semibold text-center text-[#364152] mb-8">
             إنشاء حساب جديد
@@ -19,46 +19,47 @@ function SignuPage() {
 
           <form className="flex flex-col gap-4">
 
-            {/* First Name */}
-            <div className="flex flex-col gap-2">
-              <label className="text-[#364152] fontSizeA font-normal" htmlFor="firstName">
-                {t("First Name")} / الاسم الأول
-              </label>
-              <input
-                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
-                type="text"
-                name="firstName"
-                id="firstName"
-                placeholder={t("First Name")}
-              />
-            </div>
-
-            {/* Last Name */}
-            <div className="flex flex-col gap-2">
-              <label className="text-[#364152] fontSizeA font-normal" htmlFor="lastName">
-                {t("Last Name")} / اسم العائلة
-              </label>
-              <input
-                className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
-                type="text"
-                name="lastName"
-                id="lastName"
-                placeholder={t("Last Name")}
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* First Name */}
+              <div className="flex flex-col gap-2">
+                <label className="text-[#364152] fontSizeA font-normal" htmlFor="firstName">
+                  {t("First Name")} 
+                </label>
+                <input
+                  className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder={t("First Name")}
+                />
+              </div>
+            
+              {/* Last Name */}
+              <div className="flex flex-col gap-2">
+                <label className="text-[#364152] fontSizeA font-normal" htmlFor="lastName">
+             اسم العائلة
+                </label>
+                <input
+                  className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder={t("Last Name")}
+                />
+              </div>
+          </div>
 
             {/* Username */}
             <div className="flex flex-col gap-2">
               <label className="text-[#364152] fontSizeA font-normal" htmlFor="username">
-                 اسم المستخدم
+                 البريد الإلكتروني
               </label>
               <input
                 className="w-full h-10 p-3 border border-[#C8C8C8] rounded-[3px] placeholder-[#9A9A9A] placeholder:text-sm"
                 type="text"
-                name="username"
-                id="username"
-                placeholder={t("Username")}
-              />
+                name="email"
+                id="email"
+                placeholder='البريد الإلكتروني'              />
             </div>
 
             {/* National ID */}
@@ -85,7 +86,7 @@ function SignuPage() {
                 type="password"
                 name="password"
                 id="password"
-                placeholder={t("Password")}
+                placeholder="كلمة المرور"
               />
             </div>
 
@@ -99,12 +100,12 @@ function SignuPage() {
                 type="password"
                 name="confirmPassword"
                 id="confirmPassword"
-                placeholder={t("Confirm Password")}
+                placeholder='تأكيد كلمة المرور'
               />
             </div>
 
             {/* Submit Button */}
-            <button className="w-full h-12 bg-[#DDA918] text-white text-base font-medium rounded-[3px] mt-4 mb-2">
+            <button className="w-full h-10 bg-[#DDA918] text-white text-base font-medium rounded-[3px] mt-2  ">
               {t("Sign Up")}
             </button>
 
