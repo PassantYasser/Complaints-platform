@@ -53,7 +53,7 @@ function InfoOnePage({ handleNext }) {
           </label>
           <div className="relative">
             <PhoneInput
-              country={"sa"}
+              country={"eg"}
               placeholder={t("Enter your mobile number")}
               containerClass="!w-full"
               inputClass="!w-full !h-[52px] !border !border-[#C8C8C8] !rounded-[3px] !pl-24 !text-left !text-[#364152] placeholder-[#9A9A9A]  "
