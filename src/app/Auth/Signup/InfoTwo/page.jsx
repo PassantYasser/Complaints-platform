@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -54,12 +55,12 @@ function InfoTwoPage({ handlePrev }) {
           رجوع
         </button>
 
-        <button
+        <Link href='/'
           type="submit"
-          className="w-full h-12 bg-[#DDA918] text-white rounded-[3px]"
+          className="w-full h-12 bg-[#DDA918] text-white rounded-[3px] flex justify-center items-center"
         >
           تسجيل
-        </button>
+        </Link>
       </div>
     </>
   );
