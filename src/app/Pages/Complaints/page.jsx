@@ -1,4 +1,5 @@
 "use client";
+import MainLayout from "@/app/Components/MainLayout/MainLayout";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -105,7 +106,9 @@ function ComplaintsPage() {
         };
       
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-100 p-6">
+    
+    <MainLayout>
+<main className="flex items-center justify-center min-h-screen bg-gray-100 p-6">
       <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-2xl">
 
         {/* Logo */}
@@ -431,6 +434,7 @@ function ComplaintsPage() {
         </form>
       </div>
     </main>
+    </MainLayout>
   );
 }
 

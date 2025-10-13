@@ -23,7 +23,7 @@ function SignuPage() {
   };
 
   return (
-    <div className="lg1:flex justify-between gap-8">
+    <div className="lg1:flex justify-between ">
       <section className="pt-8 px-8 w-full">
           <div className='flex justify-end'>
             <img

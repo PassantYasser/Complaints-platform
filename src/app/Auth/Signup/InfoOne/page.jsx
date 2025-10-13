@@ -53,14 +53,14 @@ function InfoOnePage({ handleNext }) {
           </label>
           <div className="relative">
             <PhoneInput
-  country={"eg"}
-  placeholder={t("Enter your mobile number")}
-  containerClass="!w-full"
-  inputClass="!w-full !h-[52px] !border !border-[#C8C8C8] !rounded-[3px] !pl-24 !text-left !text-[#364152] placeholder-[#9A9A9A]"
-  buttonClass="!absolute !left-0 !top-0 !h-full !px-3 !flex !items-center !gap-2 !bg-transparent !border-0"
-  dropdownClass="!text-[#364152] !border !z-[9999]"
-  dropdownStyle={{ position: "absolute", top: "100%", left: "0", zIndex: 9999 }}
-/>
+              country={"eg"}
+              placeholder={t("Enter your mobile number")}
+              containerClass="!w-full"
+              inputClass="!w-full !h-[52px] !border !border-[#C8C8C8] !rounded-[3px] !pl-24 !text-left !text-[#364152] placeholder-[#9A9A9A]"
+              buttonClass="!absolute !left-0 !top-0 !h-full !px-3 !flex !items-center !gap-2 !bg-transparent !border-0"
+              dropdownClass="!text-[#364152] !border !z-[9999]"
+              dropdownStyle={{ position: "absolute", top: "100%", left: "0", zIndex: 9999 }}
+            />
           </div>
         </div>
 
