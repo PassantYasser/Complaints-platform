@@ -14,7 +14,7 @@ function Navbar() {
     <div className='md:block hidden'>
         <header className="bg-[#fff] border-b border-[#E3E8EF] flex justify-between border py-2 w-full" dir='ltr'>
             {/* left side */}
-          <Link href='/' className="px-3 w-full" >
+          <Link href='/Pages/MainHome' className="px-3 w-full" >
             <img
               src="/logoiconch.png"
               alt="User"
@@ -24,12 +24,20 @@ function Navbar() {
             />
           </Link>   
           {/* right side */}
-          <div className="flex justify-center items-center  w-full" dir='ltr'>
+          {/* <div className="flex justify-center items-center  w-full" dir='ltr'>
             <ul className='flex gap-10 text-[#DDA918] text-lg '>
               <li className='cursor-pointer'><Link href='/Pages/Home'>{t('Home')}</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/AboutUs'>{t('AboutUs')}</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/Contact'>{t('contact')}</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/Home'>{t('Complaints')}</Link></li>
+            </ul>
+          </div> */}
+           <div className="flex justify-center items-center w-full" dir='ltr'>
+            <ul className='flex gap-10 text-[#DDA918] text-lg'>
+              <li className='cursor-pointer'><Link href='/Pages/MainHome'>الرئيسية</Link></li>
+              <li className='cursor-pointer'><Link href='/Pages/AboutUs'>من نحن</Link></li>
+              <li className='cursor-pointer'><Link href='/Pages/Contact'>اتصل بنا</Link></li>
+              <li className='cursor-pointer'><Link href='/Pages/Home'>الشكاوى</Link></li>
             </ul>
           </div>
       
@@ -69,7 +77,7 @@ function Navbar() {
         </div>
 
         {/* اللوجو في النص تحت الزرار */}
-        <Link href="/" className="flex justify-center mt-2">
+        <Link href="/Pages/MainHome" className="flex justify-center mt-2">
           <img
             src="/logoiconch.png"
             alt="logo"
@@ -82,7 +90,42 @@ function Navbar() {
         {/* القائمة المنسدلة */}
         {menuOpen && (
           <div className="absolute top-full left-0 w-full bg-white shadow-md border-t border-[#E3E8EF] flex flex-col text-center z-50">
-            <Link
+               <Link
+          href="/Pages/MainHome"
+          className="py-3 border-b border-[#E3E8EF] text-[#364152] hover:bg-[#F8FAFC]"
+          onClick={() => setMenuOpen(false)}
+        >
+          الرئيسية
+        </Link>
+        <Link
+          href="/Pages/AboutUs"
+          className="py-3 border-b border-[#E3E8EF] text-[#364152] hover:bg-[#F8FAFC]"
+          onClick={() => setMenuOpen(false)}
+        >
+          من نحن
+        </Link>
+        <Link
+          href="/Pages/Contact"
+          className="py-3 border-b border-[#E3E8EF] text-[#364152] hover:bg-[#F8FAFC]"
+          onClick={() => setMenuOpen(false)}
+        >
+          اتصل بنا
+        </Link>
+        <Link
+          href="/Pages/Home"
+          className="py-3 border-b border-[#E3E8EF] text-[#364152] hover:bg-[#F8FAFC]"
+          onClick={() => setMenuOpen(false)}
+        >
+          الشكاوى
+        </Link>
+        <Link
+          href="/Auth/Login"
+          className="py-3 text-[#364152] hover:bg-[#F8FAFC]"
+          onClick={() => setMenuOpen(false)}
+        >
+          تسجيل الدخول
+        </Link>
+            {/* <Link
               href="/"
               className="py-3 border-b border-[#E3E8EF] text-[#364152] hover:bg-[#F8FAFC]"
               onClick={() => setMenuOpen(false)}
@@ -116,7 +159,7 @@ function Navbar() {
               onClick={() => setMenuOpen(false)}
             >
               Login
-            </Link>
+            </Link> */}
           </div>
         )}
       </header>
