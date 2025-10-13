@@ -83,7 +83,7 @@ function Navbar() {
         {menuOpen && (
           <div className="absolute top-full left-0 w-full bg-white shadow-md border-t border-[#E3E8EF] flex flex-col text-center z-50">
             <Link
-              href="/Pages/"
+              href="/"
               className="py-3 border-b border-[#E3E8EF] text-[#364152] hover:bg-[#F8FAFC]"
               onClick={() => setMenuOpen(false)}
             >
