@@ -29,7 +29,7 @@ function Navbar() {
               <li className='cursor-pointer'><Link href='/Pages/Home'>{t('Home')}</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/AboutUs'>{t('AboutUs')}</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/Contact'>{t('contact')}</Link></li>
-              <li className='cursor-pointer'><Link href='/Pages/Complaints'>{t('Complaints')}</Link></li>
+              <li className='cursor-pointer'><Link href='/Pages/Home'>{t('Complaints')}</Link></li>
             </ul>
           </div>
       
