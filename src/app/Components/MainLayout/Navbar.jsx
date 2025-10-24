@@ -32,8 +32,8 @@ function Navbar() {
               <li className='cursor-pointer'><Link href='/Pages/Home'>{t('Complaints')}</Link></li>
             </ul>
           </div> */}
-           <div className="flex justify-center items-center w-full" dir='ltr'>
-            <ul className='flex gap-10 text-[#DDA918] text-lg'>
+          <div className="flex justify-center items-center w-full" dir='ltr'>
+            <ul className='flex gap-10 text-[#000] text-lg'>
               <li className='cursor-pointer'><Link href='/Pages/MainHome'>الرئيسية</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/AboutUs'>من نحن</Link></li>
               <li className='cursor-pointer'><Link href='/Pages/Contact'>اتصل بنا</Link></li>

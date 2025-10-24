@@ -8,9 +8,9 @@ function MainHomePage() {
   return (
     <MainLayout>
     
-    <AboutUsPage/>
+      <AboutUsPage/>
       <HomePage/>
-    <ContactPage/>
+      <ContactPage/>
 
     </MainLayout>
   )

@@ -6,11 +6,11 @@ function MainLayout({children}) {
 
   return (
   <div className="flex">
-    <div className="flex flex-1 flex-col ">
+    <div className="flex flex-1 flex-col mt-5 ">
       <div className='fixed top-0 w-full z-100'>
         <Navbar  />
       </div>
-      <main className="pt -17  ">{children}</main>
+      <main className="">{children}</main>
     </div>
   </div>  
   )

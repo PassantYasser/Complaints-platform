@@ -68,8 +68,8 @@ export default function ContactPage() {
 
   return (
     <MainLayout>
-    <div className="flex items-center justify-center bg-gray-50 py-20 px-10">
-  <div className="w-[90%]  bg-white rounded-2xl shadow-md overflow-hidden" dir="rtl">
+    <div className="    py-20   px-5">
+  <div className="w-full  mt-5 lg:mt-1  bg-gray-50 rounded-[3px] shadow-md overflow-hidden" dir="rtl">
     {/* النموذج */}
     <div className="p-8">
       <form className="space-y-4" onSubmit={handleSubmit}>
@@ -120,7 +120,6 @@ export default function ContactPage() {
           />
         </label>
 
-        {/* حقل مخفي للحماية من البريد العشوائي */}
         <input type="text" name="company" tabIndex={-1} autoComplete="off" style={{ display: "none" }} />
 
         {error && <p className="text-sm text-red-600">{error}</p>}
@@ -130,7 +129,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center justify-center rounded-lg bg-yellow-500 hover:bg-yellow-600 px-4 py-2 text-white font-medium disabled:opacity-60"
+            className="inline-flex items-center justify-center rounded-lg bg-yellow-500  px-4 py-2 text-white font-medium disabled:opacity-60"
           >
             {loading ? "جاري الإرسال..." : "إرسال الرسالة"}
           </button>
@@ -145,10 +144,7 @@ export default function ContactPage() {
         </div>
       </form>
 
-      <p className="mt-6 text-xs text-gray-400">
-        هذا النموذج يرسل البيانات إلى <code className="bg-gray-100 px-2 py-1 rounded">/api/contact</code>. 
-        يجب تنفيذ هذا الـ API لتلقي الرسائل أو تخزينها.
-      </p>
+    
     </div>
   </div>
 </div>
