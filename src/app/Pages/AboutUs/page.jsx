@@ -49,7 +49,7 @@ import { motion } from "framer-motion";
 export default function AboutUsPage() {
   return (
     <MainLayout>
-      <div className="flex items-center justify-center overflow-hidden">
+      <div className="flex items-center justify-center overflow-hidden mt-6">
         <div className="w-full overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             
