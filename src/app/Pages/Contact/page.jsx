@@ -1,15 +1,4 @@
-// import MainLayout from '@/app/Components/MainLayout/MainLayout'
-// import React from 'react'
 
-// function ContactPage() {
-//   return (
-//     <MainLayout>
-// ContactPage
-//     </MainLayout>
-//   )
-// }
-
-// export default ContactPage
 
 "use client";
 
