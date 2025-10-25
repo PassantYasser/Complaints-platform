@@ -56,10 +56,10 @@ function HomePage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
             >
-              <Link href='/Auth/Signup' className='border border-[#DDA918] text-[#DDA918] font-semibold rounded-[4px] px-8 py-4'>
+              <Link href='/Auth/Signup' className='border border-[#DDA918] text-[#DDA918]  font-semibold rounded-[4px] px-8 py-4 transition-all duration-300 hover:bg-[#c79b10] hover:text-[#fff]'>
                 {t('Create an account')}
               </Link>
-              <Link href='/Auth/Login' className='bg-[#DDA918] text-white font-semibold rounded-[4px] px-8 py-4'>
+              <Link href='/Auth/Login' className='bg-[#DDA918] text-white font-semibold rounded-[4px] px-8 py-4 hover:bg-[#f8f5ed] hover:text-[#c79b10] hover:border hover:border-[#c79b10] transition-all duration-300'>
                 {t('Log in')}
               </Link>
             </motion.div>
