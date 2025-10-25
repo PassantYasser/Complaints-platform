@@ -1,55 +1,143 @@
-"use client"
+// "use client"
+// import MainLayout from '@/app/Components/MainLayout/MainLayout'
+// import Navbar from '@/app/Components/MainLayout/Navbar'
+// import Link from 'next/link'
+// import React from 'react'
+// import { useTranslation } from 'react-i18next'
+
+
+// function HomePage() {
+//   const {t}= useTranslation()
+//   return (
+//     <MainLayout>
+//     <div className='  '>
+//         <div className='lg1:flex   '>
+//           <section className='lg1:hidden   w-full   mt-20'>
+//             <div className=' flex justify-center'>
+//             <img src="/complaintss.webp" alt="" className=' ' />
+//             </div>
+//           </section>
+      
+//           <section className='w-full p-8 flex flex-col  justify-center items-center text-center lg1:items-start  '>
+//             <p className='text-gray-600 text-4xl font-semibold'>
+//               معًا نحو مستقبلٍ رقميٍ أفضل
+
+//             </p>
+      
+//             <p className='text-gray-600 text-md font-medium mt-8'>
+// انضم إلى منصة "جهاز مستقبل مصر" وابدأ رحلتك في عالم التحول الرقمي بخطوات واثقة.
+//             </p>  
+            
+//             <div className='flex justify-center lg1:justify-start  gap-4 mt-8'>
+//               <Link href='/Pages/FollowUp' className='border border-[#DDA918] text-[#DDA918] font-semibold rounded-[4px]  px-8 py-4'>
+//                 {t('Create an account')}
+//               </Link>
+//                 <Link href='/Pages/Complaints' className='bg-[#DDA918] text-white font-semibold rounded-[4px]  px-8 py-4'>
+//                 {t('Log in')}
+//               </Link>
+//             </div>
+
+//           </section>
+      
+      
+//           <section className='lg1:block hidden w-full   mt-20'>
+//             <div className=' flex justify-center'>
+//             <img src="/registeration2.jpg" alt="" className='w-200 h-100  ' />
+//             </div>
+//           </section>
+          
+        
+//         </div>
+//     </div>
+//     </MainLayout>
+//   )
+// }
+
+// export default HomePage
+
+"use client";
 import MainLayout from '@/app/Components/MainLayout/MainLayout'
-import Navbar from '@/app/Components/MainLayout/Navbar'
 import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-
+import { motion } from 'framer-motion'
 
 function HomePage() {
-  const {t}= useTranslation()
+  const { t } = useTranslation();
+
   return (
     <MainLayout>
-    <div className='  '>
-        <div className='lg1:flex   '>
-          <section className='lg1:hidden   w-full   mt-20'>
-            <div className=' flex justify-center'>
-            <img src="/complaintss.webp" alt="" className=' ' />
+      <div className=''>
+        <div className='lg1:flex'>
+
+          {/* Section Image (Mobile) */}
+          <motion.section
+            className='lg1:hidden w-full mt-20'
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className='flex justify-center'>
+              <img src="/complaintss.webp" alt="" className='' />
             </div>
-          </section>
-      
-          <section className='w-full p-8 flex flex-col  justify-center items-center text-center lg1:items-start  '>
-            <p className='text-gray-600 text-4xl font-semibold'>
-              {t('Welcome to the Complaints and Inquiries Department')}
-            </p>
-      
-            <p className='text-gray-600 text-lg font-medium mt-3'>
-              {t('Providing a management system for the inquiries and complaints department')}
-            </p>
-      
-            <div className='flex justify-center lg1:justify-start  gap-4 mt-8'>
-              <Link href='/Pages/Complaints' className='bg-[#DDA918] text-white font-semibold rounded-[4px]  px-8 py-4'>
-                {t('Complaints')}
+          </motion.section>
+
+          {/* Section Text */}
+          <motion.section
+            className='w-full p-8 flex flex-col justify-center items-center text-center lg1:items-start'
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <motion.p
+              className='text-gray-600 text-4xl font-semibold'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              معًا نحو مستقبلٍ رقميٍ أفضل
+            </motion.p>
+
+            <motion.p
+              className='text-gray-600 text-md font-medium mt-8'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              انضم إلى منصة "جهاز مستقبل مصر" وابدأ رحلتك في عالم التحول الرقمي بخطوات واثقة.
+            </motion.p>
+
+            <motion.div
+              className='flex justify-center lg1:justify-start gap-4 mt-8'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+            >
+              <Link href='/Pages/FollowUp' className='border border-[#DDA918] text-[#DDA918] font-semibold rounded-[4px] px-8 py-4'>
+                {t('Create an account')}
               </Link>
-      
-              <Link href='/Pages/FollowUp' className='border border-[#DDA918] text-[#DDA918] font-semibold rounded-[4px]  px-8 py-4'>
-                {t('Follow-up complaints')}
+              <Link href='/Pages/Complaints' className='bg-[#DDA918] text-white font-semibold rounded-[4px] px-8 py-4'>
+                {t('Log in')}
               </Link>
+            </motion.div>
+          </motion.section>
+
+          {/* Section Image (Desktop) */}
+          <motion.section
+            className='lg1:block hidden w-full mt-20'
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className='flex justify-center'>
+              <img src="/registeration2.jpg" alt="" className='w-200 h-100' />
             </div>
-          </section>
-      
-      
-          <section className='lg1:block hidden w-full   mt-20'>
-            <div className=' flex justify-center'>
-            <img src="/complaintss.webp" alt="" className='w-200 h-100  ' />
-            </div>
-          </section>
-          
-        
+          </motion.section>
+
         </div>
-    </div>
+      </div>
     </MainLayout>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
